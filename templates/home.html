@@ -9,27 +9,39 @@
   height:360px;
   width:100%;
   object-fit:cover;
+  margin-bottom:16px;
   
       }</style>
       
     </head>
     <body>
+      {%include 'navbar.html'%}
+      <img  id="banner"class="img-fluid"src='https://career-website.bhavingami.repl.co/static/banner.jpg'>
       <div class="container" > 
         <h1 class="text-center mt-2 mb-4">Career Opportunity</h1>
         
-        <img  id="banner"class="img-fluid"src='https://career-website.bhavingami.repl.co/static/banner.jpg'>
+        
         <h2 class="text-center mt-2 mb-4">About Us</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class='row' >
+          <div class="col-md-6">
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="d-none col-d-md-block  6">
+            <img style=" border-radius:6px;height:320px;margin-bottom:8px"  id="banner2"class="img-fluid"src='/static/people.jpg'>
+          </div>
+        </div>
+        
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
         <div class>
           {%for jobs in jobs%}
           {%include 'jobitems.html'%}
           {%endfor%}
         </div>
-        <div class="text-center">
-          <button class="btn btn-primary">Contact Us</button>
-          <p class="mt-2">Copyright 2022</p>
+        <div style="margin-top:16px;" class="text-center">
+          <a href="mailto:bhavingami001@gmail.com?subject=Question%20about%20job%20opening&body=My%20name%3A%20%3Cyour%20name%3E%0D%0AQuestion%3A%20%3Cmy%20question%3E" class="btn btn-primary">Contact Us</a>
+         
         </div>
+        {%include 'footer.html'%}
       </body>
     </div>
     
